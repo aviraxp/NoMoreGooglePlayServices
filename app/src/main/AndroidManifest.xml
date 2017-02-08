@@ -10,7 +10,7 @@
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="Just for fun" />
+            android:value="Make some applications work without GMS" />
         <meta-data
             android:name="xposedminversion"
             android:value="53" />
