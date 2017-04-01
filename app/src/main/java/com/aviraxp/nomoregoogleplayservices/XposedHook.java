@@ -53,7 +53,7 @@ public class XposedHook implements IXposedHookLoadPackage {
             Method[] methods = XposedHelpers.findMethodsByExactParameters(clazz, int.class, Context.class);
             if (methods != null) {
                 for (Method i : methods) {
-                    XposedHelpers.findAndHookMethod(clazz, methods[0].getName(), Context.class, XC_MethodReplacement.returnConstant(0));
+                    XposedHelpers.findAndHookMethod(clazz, i.getName(), Context.class, XC_MethodReplacement.returnConstant(0));
                 }
                 XposedBridge.log("Hook Deprecated GoogleApiAvailability Check Success: " + lpparam.packageName + ": " + String.valueOf(clazz) + "." + methods[0].getName());
             }
